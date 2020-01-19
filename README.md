@@ -1,2 +1,2 @@
 # bid-to-win
-A assignment
+An assignment for Procreator
