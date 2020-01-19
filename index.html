@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Test</title>
+
+	<link rel="shortcut icon" href="" type="image/x-icon">
+	<link rel="apple-touch-icon" href="">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- Link to your css file -->
+	<link rel="stylesheet" href="">
+	<style>
+		.error {
+			color: red;
+			-webkit-transition: width 2s;
+			/* Safari */
+			-webkit-transition-timing-function: linear;
+			/* Safari */
+			transition: ease 2s;
+			transition-timing-function: linear;
+		}
+
+	</style>
+</head>
+
+<body class="bg-light">
+	<div class="container">
+		<div class="row" id="winnerDiv" style="display: none">
+			<div class="col-12">
+				<div class="card m-3">
+					<div class="card-body bg-warning text-center">
+						<h4 class="mb-0 font-weight-bold">Winner is Ankit with 100% unique </h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 col-sm-6">
+				<div class="card m-3">
+					<div class="card-body">
+						<h4 class="card-title mb-0">Bid to win</h4>
+						<small>Minimum 5 bids are required to decide the winner</small>
+						<hr />
+						<form action="" id="form-calc" method="POST" role="form">
+
+							<div class="form-group">
+								<label for="name">Enter Name</label>
+								<input type="text" class="form-control" id="name" name="name" placeholder="e.g. John Doe" required>
+							</div>
+							<div class="form-group">
+								<label for="bid">Enter Bid Value</label>
+								<input type="number" class="form-control" max="1.00" maxlength="4" min="0.01" id="bid" name="bid" placeholder="value between 0.01 to 1.00" required>
+							</div>
+							<button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
+							<button type="button" id="calculateBtn" class="btn btn-success">Calculate</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-6">
+				<div class="card m-3">
+					<div class="card-body">
+						<p class="font-weight-bold mb-0">New Bids</p>
+						<a href="javascript:clearAll();" class="font-weight-bold float-right">Clear All</a>
+
+						<br />
+						<hr />
+						<div id="bidders">
+							<ul class="list-group" id="listOfBids">
+								<li class="list-group-item">Fetching List</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- jquery-validation@1.19.1 -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>
