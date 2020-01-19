@@ -18,7 +18,7 @@ $(() => {
 
   if (dataList != null) {
     var dataJson = JSON.parse(dataList);
-    if (dataJson.length == 5) {
+    if (dataJson.length >= 5) {
       $("#calculateBtn").show();
     } else {
       $("#calculateBtn").hide();
@@ -100,7 +100,7 @@ function calculate() {
 
   if (dataList != null) {
     var dataJson = JSON.parse(dataList);
-    if (dataJson.length == 5) {
+    if (dataJson.length >= 5) {
       $("#calculateBtn").show();
       let counted = [];
 
@@ -154,6 +154,8 @@ function calculate() {
               ascOrderTimeStamp[0].bid
           );
         } else {
+          //create a distinct value array from ascSort for bids occured more than 1ce, take only
+          //first value inserted due to ascending order sort
           const occuredTimesDistinct = new Set();
           const takeOnlyFirstValueWithoutDuplicate = ascSort.filter(val => {
             if (occuredTimesDistinct.has(val.bid)) {
